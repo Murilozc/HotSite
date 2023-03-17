@@ -1,0 +1,139 @@
+﻿@model Interesse
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Hotsite";
+}
+<div class="row">
+<div class="col-5">
+    <h1>Iniciativa Saúde da Cidade</h1>
+    <p>
+        Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+    </p>
+    <p>
+        Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+    </p>
+</div>
+<div class="col-7">
+<img   src="~/img/imagem1.png" width="400px" >
+</div>
+</div>
+<div class="row">
+<div class="col-4">
+    <h2>Entre em contato!:</h2>
+    <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+    <form action="/Home/Cadastrar" method="POST">
+        <div>
+            <label asp-for="Nome">Nome:</label>
+            <input asp-for="Nome"  required/>
+        </div>
+        <div>
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email"  required/>
+        </div>
+        <div>
+            <label asp-for="Mensagem">Mensagem (opcional):</label>
+            <textarea asp-for="Mensagem"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Enviar" />
+        </div>
+        <p>
+        @ViewBag.Mensagem
+        </p>
+    </form>
+</div>
+<br>
+<br>
+<div class="col-8" >
+    <div class="row" >
+        <div class="col-4" > 
+          <img class="margen"class="img-fluid"  src="~/img/imagem2.jpg"  >
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+                Agenda de Eventos
+            </button>
+        </div>
+        <div class="col-4" class="margen">
+          <img class="margen" class="img-fluid"  src="~/img/imagem2.jpg"  >
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
+                Dicas de Vida Saudável
+            </button>
+        </div>
+        <div class="col-4" >
+          <img class="margen" class="img-fluid"  src="~/img/imagem2.jpg"  >
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">
+                Apoiadores
+          </button>
+        </div>
+    </div>
+    
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agenda</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     10/10/10 10:10- Evento 1
+    <p>Lorem ipsum dolor sit amet. At corrupti magnam non recusandae natus ab quae nihil. Ut adipisci provident ut dolor dignissimos et adipisci sunt. Hic rerum recusandae et dolorem dolor et quia cumque qui iste internos eos enim atque qui quas vitae aut odio repellendus!</p> 
+ 10/10/10 10:10- Evento 1
+    <p>Lorem ipsum dolor sit amet. At corrupti magnam non recusandae natus ab quae nihil. Ut adipisci provident ut dolor dignissimos et adipisci sunt. Hic rerum recusandae et dolorem dolor et quia cumque qui iste internos eos enim atque qui quas vitae aut odio repellendus!</p> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Dicas de Vida Saudável</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet. Id esse corrupti et incidunt modi est placeat nemo. Eum error alias ex voluptas quia vel ipsam ducimus eos expedita quasi aut velit laudantium. Et deserunt temporibus in ipsam asperiores non quae autem ut quaerat earum qui cumque magnam.</p>
+    <p>Eos dolor quod qui unde pariatur ea ratione corrupti vel quidem laboriosam 33 earum amet ex assumenda galisum non voluptatem velit. Ut rerum sint et itaque enim non dolores animi quo porro pariatur ab iste velit aut ullam molestiae et iusto distinctio. Eum aspernatur doloremque et inventore dolores eos magnam quam.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Apoiadores</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <img class="img-fluid"  src="~/img/imagem4.jpg"  >
+    
+    <p>Empresa 1</p>
+    <p>Lorem ipsum dolor sit amet. Est repellendus fuga aut ipsum fugit aut voluptatem labore quo nesciunt eligendi non velit omnis eum distinctio rerum. Non quasi quis ut repudiandae perspiciatis id facilis minus quo nisi repudiandae ut ratione aliquam id laborum iste. Eos dignissimos asperiores aut laboriosam nobis qui dolore quia hic nostrum iusto.</p>
+     <img class="img-fluid"  src="~/img/imagem4.jpg"  >
+    
+    <p>Empresa 2</p>
+    <p>Lorem ipsum dolor sit amet. Est repellendus fuga aut ipsum fugit aut voluptatem labore quo nesciunt eligendi non velit omnis eum distinctio rerum. Non quasi quis ut repudiandae perspiciatis id facilis minus quo nisi repudiandae ut ratione aliquam id laborum iste. Eos dignissimos asperiores aut laboriosam nobis qui dolore quia hic nostrum iusto.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
